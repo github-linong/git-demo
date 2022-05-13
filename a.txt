@@ -1,7 +1,3 @@
 main
 
-<<<<<<< HEAD
-feat/3
-=======
 feat/5
->>>>>>> feat/1
