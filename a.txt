@@ -1,8 +1,66 @@
-main
+# # main
 
-feat/5
-feat/4
-    feat/1
+# # feat/5
+# # feat/4
+# #     feat/1
 
-vscode 
-    feat/vscode/1 不push
+# # vscode 
+# #     feat/vscode/1 不push
+
+
+# ## 测试异常 push
+# # 这是主分支，只有合并
+# git checkout main 
+# git pull
+
+# # 这是功能1
+# git checkout main 
+# git checkout -b bug-1
+# # 这是功能2
+# git checkout main 
+# git checkout -b bug-2
+
+
+# # 修改文件内容 bug-1 
+# # 模拟先进行了一个项目操作
+# git checkout bug-1
+# ## 无冲突
+# vim bug-1.1.txt 
+# ## 有冲突
+# vim bug-1.2.txt
+# git commit -m 'bug-1'
+# git push
+# git checkout main
+# git merge bug-1
+
+# # 修改文件内容
+# # 模拟进行第二个项目操作上线之后，又进行了修改
+# git checkout bug-2
+# ## 无冲突
+# vim bug-1.1.txt 
+# ## 有冲突
+# vim bug-1.2.txt
+# git commit -m 'bug-2'
+# git push
+# git checkout main
+# git merge bug-2
+# git checkout bug-2
+# ## 无冲突
+# vim bug-1.1.txt 
+# ## 有冲突
+# vim bug-1.2.txt
+# git commit -m 'bug-2'
+# git push
+
+
+# # 修改文件内容 bug-1
+# # 模拟第一个项目操作
+# git checkout bug-1
+# ## 无冲突
+# vim bug-1.1.txt 
+# ## 有冲突
+# vim bug-1.2.txt
+# git commit -m 'bug-1'
+# git push
+# git checkout main
+# git merge bug-1
